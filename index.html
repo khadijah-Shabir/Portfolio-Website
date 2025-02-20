@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khadijah Shabir - Personal Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 8rem 0;
+            margin-top: -56px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .achievement-card {
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+        }
+
+        .contact-form {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Navigation -->
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#home">Khadijah Shabir</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#achievements">Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <img src="1697082559730.jpg" alt="Khadijah Shabir" class="profile-image mb-4">
+            <h1 class="display-4">Khadijah Shabir</h1>
+            <p class="lead">BS Computer Science Student | Technical Writer | Community Leader</p>
+            <div class="mt-4">
+                <a href="#contact" class="btn btn-light btn-lg me-3">Contact Me</a>
+                <a href="#about" class="btn btn-outline-light btn-lg">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">About Me</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Education</h3>
+                    <div class="timeline-item">
+                        <h4>BS Computer Science</h4>
+                        <p class="text-muted">Government College University Faisalabad | 2022-2026</p>
+                        <p>CGPA: 3.55/4.0</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>FSC Pre-Medical</h4>
+                        <p class="text-muted">Punjab Group of Colleges Vehari | 2018-2020</p>
+                        <p>Score: 1044/1100</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Weekly Schedule</h3>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Morning</th>
+                                <th>Afternoon</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-primary">
+                                <td>Monday</td>
+                                <td>Classes</td>
+                                <td>IEEE Activities</td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>Tuesday</td>
+                                <td>Technical Writing</td>
+                                <td>Study Time</td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>Wednesday</td>
+                                <td>Classes</td>
+                                <td>GDSC Activities</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <td>Thursday</td>
+                                <td>Project Work</td>
+                                <td>Community Service</td>
+                            </tr>
+                            <tr class="table-danger">
+                                <td>Friday</td>
+                                <td>Classes</td>
+                                <td>Personal Projects</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Achievements</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card achievement-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Principal UGRAD Grantee</h5>
+                            <p class="card-text">Selected as Principal Grantee for Spring 2025 out of 36,000 applicants (0.5% selection rate)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card achievement-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Board Position</h5>
+                            <p class="card-text">Secured 3rd Position at Elementary board level with 472/500 marks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card achievement-card">
+                        <div class="card-body">
+                            <h5 class="card-title">100% Scholarship</h5>
+                            <p class="card-text">Awarded full scholarship at Punjab Group of Colleges Vehari for matric studies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card achievement-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Academic Excellence</h5>
+                            <p class="card-text">Secured 1025/1100 marks in matric and 80% scholarship for FSC studies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Experience</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="timeline-item">
+                        <h4>IEEE GCUF Student Branch</h4>
+                        <p class="text-muted">Secretary of Event Management Team | Oct 2023 - Present</p>
+                        <p>Managing event planning, logistics, and promotion while collaborating with various committees.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Google Developer's Student Club GCUF</h4>
+                        <p class="text-muted">Writer's Lead | Sep 2023 - Present</p>
+                        <p>Leading content strategy and managing a team of writers and editors.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="timeline-item">
+                        <h4>Freelance Technical Writer</h4>
+                        <p class="text-muted">Jul 2022 - Present</p>
+                        <p>Creating technical content and collaborating with various stakeholders.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>SARIOON</h4>
+                        <p class="text-muted">Program Coordinator | Jul 2023 - Aug 2023</p>
+                        <p>Organized virtual classes and managed student communications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="contact-form needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">
+                                Please enter your name.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter your message.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorite Sites Section -->
+    <section id="favorites" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Favorite Sites</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
+                <li class="list-group-item"><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+                <li class="list-group-item"><a href="https://www.ted.com/" target="_blank">TED Talks</a></li>
+                <li class="list-group-item"><a href="https://github.com/" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Favorite Movies/Books Section -->
+    <section id="movies-books" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Favorite Movies & Books</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Movies</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">The Social Network</li>
+                        <li class="list-group-item">The Imitation Game</li>
+                        <li class="list-group-item">Interstellar</li>
+                        <li class="list-group-item">Inception</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Books</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Clean Code by Robert C. Martin</li>
+                        <li class="list-group-item">The Pragmatic Programmer by Andrew Hunt</li>
+                        <li class="list-group-item">Atomic Habits by James Clear</li>
+                        <li class="list-group-item">Deep Work by Cal Newport</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Hobbies</h2>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">Technical Writing</li>
+                <li class="list-group-item">Coding Challenges</li>
+                <li class="list-group-item">Reading Tech Blogs</li>
+                <li class="list-group-item">Community Volunteering</li>
+                <li class="list-group-item">Learning New Programming Languages</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2023 Khadijah Shabir. All rights reserved.</p>
+            <address>
+                Contact: <a href="mailto:khadijah@example.com" class="text-white">khadijah@example.com</a>
+            </address>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+</body>
+</html>
